@@ -11,11 +11,23 @@ Digital Merkiting | Orbit
                     <h1 class="title">Digital <span class="theme-gradient">Marketing</span></h1>
                     
                     <p class="subtitle">Grow Your Brand Online with ROI-Focused Digital Strategies</p>
-                    <p>
+                    <p id="ecommerce-text">
                          Our Digital Marketing Services are designed to help businesses of all sizes increase online visibility, attract targeted traffic, and drive measurable results. From SEO and social media to paid advertising and content marketing, we deliver tailored strategies that help you build your brand, reach more customers, and grow revenue across digital channels.
-                          Whether you're launching a startup, scaling an eCommerce store, or expanding your service business, our digital marketing experts develop data-driven campaigns that align with your business goals and deliver real value.
+                        Whether you're launching a startup, scaling an eCommerce store, or expanding your service business, our digital marketing experts develop data-driven campaigns that align with your business goals and deliver real value.
 
+                        Digital Marketing Agency
+                        Need more leads? Better conversions? Higher revenue? That's exactly what our digital marketing services are about. If you have a business and a dream to achieve with it, we've got you. See why 300+ businesses rely on TekRevol, a leading digital marketing agency in USA, to maximize their marketing budgets, generate more qualified leads, and boost their ROI.
+
+                        What Digital Marketing Can Do for Your Business
+                        Whether you are an eCommerce business looking to boost your sales, a tech startup targeting rapid scaling, or even a local service provider seeking to expand reach, digital marketing services have the power to make it happen for you.
+
+                        All you need is a results-driven digital marketing agency that knows exactly what to fine-tune your marketing funnels, relies on tried-and-tested strategies that work, and delivers results without the usual smoke and mirrors.
+
+                        Since 2018, TekRevol has partnered with hundreds of businesses across the USA and beyond to optimize targeted audiences, generate qualified leads, and boost brand authority. Market leadership and stronger customer connections? That’s the by-product of what we deliver.
                     </p>
+                    <div class="banner-btn-group mt--30">
+                          <a href="#" class="rainbow-gradient-btn" onclick="toggleReadMore(event)" id="readMoreBtn"><span>Read More ...</span></a>
+                    </div>
                     <div class="banner-btn-group mt--30">
                         <a class="rainbow-gradient-btn" href="contact.html"><span>Get Started</span></a>
                         <a class="rainbow-gradient-btn rainbow-gradient-btn-2" href="#features"><span>Our Features</span></a>
@@ -24,7 +36,7 @@ Digital Merkiting | Orbit
             </div>
             <div class="col-lg-6 py-5">
                 <div class="banner-thumbnail">
-                    <img src="{{asset('frontend')}}/assets/webdesign/website-devlopment.jpg" alt="Web Design Services">
+                    <img src="{{asset('frontend/assets/images/banner/08 - Digital Marketing/Digital Marketing (2).jpg')}}" alt="Web Design Services">
                 </div>
             </div>
         </div>

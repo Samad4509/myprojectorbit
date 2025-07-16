@@ -255,13 +255,11 @@ Home Page | Orbit
                     </div>
                 </div>
             </div>
-
+          
             <!-- All Services Button -->
             <div class="row mt-5">
                 <div class="col-12 text-center">
-                    <a href="services.html" class="btn button-color btn-lg rounded-pill px-5 py-3 shadow">
-                        View All Services <i class="fas fa-arrow-right ms-2"></i>
-                    </a>
+                        <a class="rainbow-gradient-btn" href="{{route('service')}}"><span>View All Services</span></a>
                 </div>
             </div>
         </div>
@@ -463,10 +461,7 @@ Home Page | Orbit
             <!-- All Products Button -->
             <div class="row mt-5">
                 <div class="col-12 text-center">
-                    <a href="products.html"
-                        class="btn button-color btn-lg rounded-pill px-5 py-3 shadow text-white border-0">
-                        View All Products <i class="fas fa-arrow-right ms-2"></i>
-                    </a>
+                    <a class="rainbow-gradient-btn" href="{{route('all.products')}}"><span>View All Services</span></a>
                 </div>
             </div>
         </div>
@@ -583,9 +578,7 @@ Home Page | Orbit
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="view-all-btn text-center mt--60">
-                            <a href="blog.html" class="btn button-color btn-lg rounded-pill px-5 py-3 shadow">
-                                View All Blog Posts <i class="fas fa-arrow-right ms-2"></i>
-                            </a>
+                            <a class="rainbow-gradient-btn" href="{{route('blog')}}"><span>View All Blogs</span></a>
                         </div>
                     </div>
                 </div>

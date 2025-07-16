@@ -2,6 +2,7 @@
 @section('title')
 E-commerce with app | Orbit
 @endsection
+
 @section('body')
 <div class="preloader">
             <div class='loader'>
@@ -22,14 +23,32 @@ E-commerce with app | Orbit
                             {{-- <p class="subtitle">Our e-commerce solutions include mobile applications for a seamless
                                 shopping experience.</p> --}}
                             <p class="subtitle">Launch Your Online Store with Seamless Mobile Integration.</p>
-                            <p>Looking to expand your online store's reach and drive more sales? Our E-commerce With App solution offers a powerful, scalable, and mobile-friendly platform designed to provide a seamless shopping experience across all devices. Whether you’re a startup or an enterprise, we create fully customized eCommerce websites integrated with Android/iOS mobile apps to maximize customer engagement and conversion.</p>
-                            {{-- <p>Benefits: Increases sales through mobile accessibility and enhances customer engagement.
-                                Unique Selling Points: Custom app development, secure payment gateways, and integrated
-                                inventory management.
-                                Case Study: An online retailer saw a 50% increase in sales after launching their mobile
-                                app alongside their e-commerce site.
-                                Overall Benefit: Clients will benefit from expanded market reach, improved customer
-                                engagement, and increased sales through a convenient shopping experience.</p> --}}
+                                <p id="ecommerce-text">
+                                    As a leading ecommerce application development company, we specialize in crafting bespoke solutions that propel your brand to new heights. So partner with TekRevol and unlock the potential of your online business with our innovative solutions and expertise in e-commerce mobile app development. Gain 10X conversions through digitizing your businesses with our custom Ecommerce application development.
+                                    <span id="dots">...</span><span id="more" style="display:none;">
+                                    <br><br>
+                                    Business Empowering Ecommerce App Development Services
+                                    The world is currently witnessing an e-commerce boom, and do you know what's driving this boom? Ecommerce Apps! E-commerce helps drive maximum conversions to your business by becoming a single point where customers can view all of your products and their related information with easy payment methods. As a leading ecommerce mobile app development company, TekRevol has played its part in allowing businesses to gain an impressive increase in conversions and engagement.
+                                    With its quality-enriched e-commerce mobile app development services, clients can see their app ideas transit into reality. We have an in-house team of e-commerce app developers who know exactly how to structure these types of apps to drive home a stellar experience for users. TekRevol is hands down your go-to place for ecommerce application development services.
+                                    <br><br>
+                                    <strong>How Many Types of Ecommerce Apps Can We Develop?</strong><br>
+                                    Ecommerce apps are not just useful for B2C businesses. They are now being used and developed to suit all kinds of digital consumer interactions. Whatever you sell, you can do it through an Ecommerce app.
+                                    <br><br>
+                                    Being a top-rated Ecommerce app development company, we can offer the following kinds of Ecommerce application development solutions for you:
+                                    <ul>
+                                        <li>Consumer To Consumer</li>
+                                        <li>E-Marketplace</li>
+                                        <li>Business to Business</li>
+                                        <li>Business To Consumer</li>
+                                        <li>Second Hand Goods Marketplace</li>
+                                    </ul>
+                                    </span>
+                                </p>
+
+                                <div class="banner-btn-group mt--30">
+                                <a href="#" class="rainbow-gradient-btn" onclick="toggleReadMore(event)" id="readMoreBtn"><span>Read More ...</span></a>
+                                </div>
+                            
                             <div class="banner-btn-group mt--30">
                                 <a class="rainbow-gradient-btn" href="contact.html"><span>Get Started</span></a>
                                 <a class="rainbow-gradient-btn rainbow-gradient-btn-2" href="#features"><span>Our
@@ -37,9 +56,9 @@ E-commerce with app | Orbit
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 py-5">
+                    <div class="col-lg-6 py-5 fixed-image">
                         <div class="">
-                            <img src="{{asset('frontend')}}/assets/webdesign/website-devlopment.jpg" alt="Web Design Services">
+                            <img src="{{asset('frontend/assets/images/banner/02 - Multi Vendor Ecommerce/Multi Vendor Ecommerce (1).jpg')}}" alt="Web Design Services">
                         </div>
                     </div>
                 </div>

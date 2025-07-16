@@ -22,10 +22,36 @@ Hotel Management | Orbit
                         <div class="banner-content">
                             <h1 class="title"> Hotel  <span class="theme-gradient"></span> Management System</h1>
                             <p class="subtitle">We provide comprehensive inventory and hotel management systems to streamline operations</p>
-                            <p>Benefits: Reduces waste, improves stock control, and enhances guest experience.
-                                Unique Selling Points: Real-time tracking, reporting features, and integration with POS systems.
-                                Case Study: A hotel client reduced inventory costs by 25% with our management system.
-                                Overall Benefit: Clients will experience improved operational efficiency, reduced costs, and enhanced customer satisfaction, leading to increased profitability.</p>
+                           <p id="ecommerce-text">
+                                As a pioneering hotel management system development company, YES IT Labs redefines the landscape of hospitality management. Our expertise as a hotel management system developer company empowers establishments to harness technology for unparalleled growth. At the heart of our offerings lies the precision of hotel management software development, revolutionising the way hotels operate and thrive.
+                                <br><br>
+                                A hotel management web application transcends routine tasks, assuming the role of a revenue booster by augmenting bookings. Beyond mere operations, this application serves as the catalyst that enhances the entire guest journey—from online booking to stay and post-stay interactions.
+                                <br><br>
+                                Designed for hotels, RV parks, resorts, motels, and more, a hotel management website serves as a comprehensive solution for organisational and financial activities. It embraces functions ranging from reservations and customer relationship management to property and maintenance oversight, accounting, and employee scheduling.
+                                <br><br>
+                                Our dedicated programmers at YES IT Labs excel at providing top-notch hotel management system services. They conceive and develop innovative Hotel Reservation portals, embodying the simplicity of one-touch online booking and cancellation services.
+                                <br><br>
+                                Experience the comprehensive capabilities offered by YES IT Labs’ hotel management system services. Our solutions empower hotels with next-gen capabilities to streamline reservations, enhance operational efficiency, and maximise revenue. Through real-time integrations with global distribution systems and online travel agents, our hotel management system web application expands market reach, optimises occupancy rates, and eradicates booking discrepancies.
+                                <br><br>
+                                Elevate your hotel’s prowess with YES IT Labs, your partner in redefining hospitality management. Harness the power of technology for sustained success, operational excellence, and elevated guest experiences.
+                                <br><br>
+                                <strong>Benefits of Our Hotel Management System:</strong>
+                                <ul id="ecommerce-text">
+                                    <li><strong>Hotel Management App Developer Expertise:</strong> Our skilled hotel management app developers create solutions tailored to the hospitality industry.</li>
+                                    <li><strong>Web-Based Hotel Management System:</strong> Access and control your system in real time from anywhere.</li>
+                                    <li><strong>Efficient Web-Based Hotel Booking:</strong> Streamline reservations with a user-friendly booking interface.</li>
+                                    <li><strong>User-Friendly Interface:</strong> Simplify hotel operations with an intuitive, easy-to-use system.</li>
+                                    <li><strong>Remote Access:</strong> Monitor and manage your hotel operations from any location.</li>
+                                    <li><strong>Integrated Distribution System:</strong> Expand your booking reach by integrating with global distribution networks.</li>
+                                    <li><strong>Automation for Improved Control:</strong> Automate repetitive tasks, improving operational control and freeing up staff time.</li>
+                                    <li><strong>Effortless Business Resource Management:</strong> Manage room allocations, staff, and resources efficiently.</li>
+                                    <li><strong>Data Analytics Insights:</strong> Use analytics to understand guest behavior, trends, and performance metrics.</li>
+                                </ul>
+                            </p>
+
+                            <div class="banner-btn-group mt--30">
+                                <a href="#" class="rainbow-gradient-btn" onclick="toggleReadMore(event)" id="readMoreBtn"><span>Read More ...</span></a>
+                                </div>
                             <div class="banner-btn-group mt--30">
                                 <a class="rainbow-gradient-btn" href="contact.html"><span>Get Started</span></a>
                                 <a class="rainbow-gradient-btn rainbow-gradient-btn-2" href="#features"><span>Our
@@ -33,9 +59,9 @@ Hotel Management | Orbit
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 py-5 fixed-image">
                         <div class="">
-                            <img src="{{asset('frontend')}}/assets/webdesign/website-devlopment.jpg" alt="Web Design Services">
+                            <img src="{{asset('frontend/assets/images/banner/11 - Hotel Management Site/Hotel Manegement.webp')}}" alt="Web Design Services">
                         </div>
                     </div>
                 </div>

@@ -10,23 +10,43 @@ Accountant Software | Orbit
                 <div class="banner-content">
                     <h1 class="title">Accountant<span class="theme-gradient">Software</span></h1>
                     <p class="subtitle">Our blog site solutions are designed to help you share insights and engage with your audience.</p>
-                    <p>
-                        Benefits: Boosts brand authority and improves SEO.
-                        Unique Selling Points: Easy-to-use content management system, social sharing features, and analytics tracking.
-                        Testimonial: "Our blog traffic has doubled since we launched the new site, thanks to Orvit's expertise." - Content Creator Client
-                        Overall Benefit: Clients will establish themselves as thought leaders in their industry, driving traffic and engagement to their brand.
-                        11. Inventory Management / Hotel Management System
-                        We provide comprehensive inventory and hotel management systems to streamline operations.
+                    <p id="ecommerce-text">
+                        Fully Integrated Accountancy Software that works for you
+
+                        Our intuitive and practice-spanning cloud accountancy software helps accountants operate smarter and more efficiently to free up their time and serve their clients more closely.
+                        Packed to the brim with advanced features, Capium is the only cloud-based solution your practice could ever need. From accounts production and tax returns to company secretarial and payroll, our software streamlines it all.
+                        Manage your accounting firm like never before with Capium’s practice management software that helps coordinate your team to provide a client-focused service that achieves your goals, keeps a healthy cashflow and levels up your practice.
+
+
+                        Easy, efficient and innovative accounting software for accountants and accounting firms.
+
+                        Running an accounting or bookkeeping firm can be challenging. To make things easier, you need a solution that will streamline workflows, let you access client data from anywhere and free up your time to perform high value, billable work. QuickBooks Online Accountant is accounting software for accountants designed to do that and more. Sign up to use QuickBooks Online Accountant for your accounting firm for free.
+
+                        A driving force in Making Tax Digital
+                        Our accountancy software eases the congestion of transitioning to the new Making Tax Digital (MTD) system to help bring accountants into the future of the accounting and bookkeeping profession.
+
+                        
+                        We’re proud to be among the limited number of suppliers that HMRC recognises for MTD purposes and will assist you get your clients ready for the massive changes in front of us.
+
+                        
+                        Shore up on MTD for VAT and get ready for MTD for Income Tax (IT) and Corporation Tax. Introduce the best practices ahead of schedule and become the confident accountant for good — the one that helps small business owners enter the digital age of reporting.
+
+                        
+                        We’re ready for MTD — are you? Download our latest whitepaper to find out more, or better yet, call us to find out how you can be MTD-ready by the deadline.
+
                     </p>
+                    <div class="banner-btn-group mt--30">
+                                <a href="#" class="rainbow-gradient-btn" onclick="toggleReadMore(event)" id="readMoreBtn"><span>Read More ...</span></a>
+                                </div>
                     <div class="banner-btn-group mt--30">
                         <a class="rainbow-gradient-btn" href="contact.html"><span>Get Started</span></a>
                         <a class="rainbow-gradient-btn rainbow-gradient-btn-2" href="#features"><span>Our Features</span></a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 py-5 fixed-image">
                 <div class="banner-thumbnail">
-                    <img src="{{asset('frontend')}}/assets/webdesign/website-devlopment.jpg" alt="Web Design Services">
+                    <img src="{{asset('frontend/assets/images/banner/06 - Accountant Software/Accountant Software (2).jpg')}}" alt="Web Design Services">
                 </div>
             </div>
         </div>

@@ -13,31 +13,43 @@ News Portal | Orbit
             </div>
         </div>
        <!-- Start Banner Area -->
-<section class="rainbow-banner-area rainbow-banner-style-2 rainbow-section-gap">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="banner-content">
-                    <h1 class="title">News  <span class="theme-gradient">Web Design</span> Services</h1>
-                    <p class="subtitle">Launch a Powerful News Portal That Informs, Engages & Converts.</p>
-                    <p>
-                         In today’s fast-paced digital world, a well-designed news portal is essential for attracting and retaining readers. Our News Web Design Services help media houses, journalists, bloggers, and publishers build robust, responsive, and SEO-optimized news websites that deliver real-time updates and content-rich experiences. Whether you're covering local events or global headlines, we create dynamic, custom news portals that drive traffic, increase engagement, and monetize readership effectively.
 
-                    </p>
-                    <div class="banner-btn-group mt--30">
-                        <a class="rainbow-gradient-btn" href="contact.html"><span>Get Started</span></a>
-                        <a class="rainbow-gradient-btn rainbow-gradient-btn-2" href="#features"><span>Our Features</span></a>
+    <section class="rainbow-banner-area rainbow-banner-style-2 rainbow-section-gap">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="banner-content">
+                        <h1 class="title">News  <span class="theme-gradient">Web Design</span> Services</h1>
+                        <p class="subtitle">Launch a Powerful News Portal That Informs, Engages & Converts.</p>
+                        <p id="ecommerce-text">
+                                    In today’s fast-paced digital world, a well-designed news portal is essential for attracting and retaining readers. Our News Web Design Services help media houses, journalists, bloggers, and publishers build robust, responsive, and SEO-optimized news websites that deliver real-time updates and content-rich experiences. Whether you're covering local events or global headlines, we create dynamic, custom news portals that drive traffic, increase engagement, and monetize readership effectively.
+                                    News portal website development solution for the newspaper, media, and news channel industry. News Portal Website Development Company is an online communication medium for internet users who are read all over the world. Even for individual and online newspaper website media, news channel industry, and even individual freelance journalists. Our expertise lies in our complete experience in the IT business with conterminous variation, innovative and latest ideas, perfect timing, and a ready-to-help perspective. The news portal development allows us to publish articles, blogs, press releases, columns, publications, and other news-related content.
+                                    Seawind Solution, a leading Web Design and Development company, provides appealing and efficient news portal web development, and online solutions for newspapers, media, the news channel industry, and even individual freelance journalists. A special website design is often created by Seawind Solution that brings together news from various sources. No matter, whether you are a journalist, a popular news portal website development company, or a channel, a News Portal is the only thing that helps you to reach your audience by utilizing the latest technologies. The IT industry has reached new heights in the digital world. You can get any news from anywhere and anytime of the day with the help of this news portal.
+                                    We offer custom news web portal design and development services including news web operation development, being news website improvement, news portal maintenance and support.
+
+                                    We design and develop your news portal according to your custom requirements with dynamic orders and sections like indigenous and international news, life, sports, entertainment, business etc.
+
+                                    Our news website CMS (Content Management System) allows news owners to publish news, press releases, articles, blogs, online polls and other related content. Also, the news websites we develop are completely SEO friendly solutions for high visibility in search engine page rankings.
+ 
+                                </p>
+                                <div class="banner-btn-group mt--30">
+                                <a href="#" class="rainbow-gradient-btn" onclick="toggleReadMore(event)" id="readMoreBtn"><span>Read More ...</span></a>
+                                </div>
+                        <div class="banner-btn-group mt--30">
+                            <a class="rainbow-gradient-btn" href="contact.html"><span>Get Started</span></a>
+                            <a class="rainbow-gradient-btn rainbow-gradient-btn-2" href="#features"><span>Our Features</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 py-5 fixed-image">
+                    <div class="banner-thumbnail">
+                        <img src="{{asset('frontend/assets/images/banner/03 - News Portal/News Portal.jpg')}}" alt="Web Design Services">
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 py-5">
-                <div class="banner-thumbnail">
-                    <img src="{{asset('frontend')}}/assets/webdesign/website-devlopment.jpg" alt="Web Design Services">
-                </div>
-            </div>
         </div>
-    </div>
-</section>
+    </section>
+
 <!-- End Banner Area -->
         <section class="py-5 hero-section">
             <div class="container">

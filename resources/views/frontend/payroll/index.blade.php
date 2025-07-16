@@ -22,13 +22,25 @@ Payroll Page | Orbit
                             <h1 class="title">Payroll <span class="theme-gradient"></span> System</h1>
                             <p class="subtitle">Our housing site solutions connect buyers and sellers in the real estate
                                 market.</p>
-                            <p>Benefits: Simplifies property listings and enhances user experience.
-                                Unique Selling Points: Advanced search filters, virtual tours, and integrated payment
-                                options.
-                                Testimonial: "The housing site has made it easier for us to connect with potential
-                                buyers." - Real Estate Client
-                                Overall Benefit: Clients will benefit from a streamlined process for buying and selling
-                                properties, leading to faster transactions and increased sales.</p>
+                            <p id="ecommerce-text">
+                                
+                                Making sure your people get paid on time is critical for businesses. It shows your people you value them, nurtures engagement, and supports business success. But running payroll isn’t easy and can be complex and time-consuming, especially if you have sites in multiple states or countries.
+
+                                The components of your payroll can change from one cycle to the next as people’s details change and as you add new joiners, remove people who’ve left, and incorporate any salary changes.
+
+                                In today’s world of multi-national companies, having a payroll system to help automate processes across all your locations worldwide is key to saving time, easing pressure, and ensuring compliance with local laws. So, how do you go about finding the right payroll system for your business?
+
+                                Choosing the right payroll system for your business
+                                When selecting a payroll system for your business, think about what payroll services your company requires. Talk to people in finance, payroll, and related departments across your organization to understand and define their needs: What features, integrations, and compliance capabilities should the payroll system have? Is it budget-friendly?
+
+                                The ability to scale or downsize at speed as needed for different stages of growth may also be an essential consideration for fast-growing businesses.
+
+                                The right payroll system for your company will increase your payroll data accuracy and efficiency. However, payroll systems aren’t one-size-fits-all. There are many options, and each suits a different type and size of business. To help you with your search, it’s a good idea to make a list of every kind and outline the pros and cons of each relative to your business’s needs.
+
+                            </p>
+                            <div class="banner-btn-group mt--30">
+                                <a href="#" class="rainbow-gradient-btn" onclick="toggleReadMore(event)" id="readMoreBtn"><span>Read More ...</span></a>
+                                </div>
                             <div class="banner-btn-group mt--30">
                                 <a class="rainbow-gradient-btn" href="contact.html"><span>Get Started</span></a>
                                 <a class="rainbow-gradient-btn rainbow-gradient-btn-2" href="#features"><span>Our
@@ -36,9 +48,9 @@ Payroll Page | Orbit
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 py-5 fixed-image">
                         <div class="">
-                            <img src="{{asset('frontend')}}/assets/webdesign/website-devlopment.jpg" alt="Web Design Services">
+                            <img src="{{asset('frontend/assets/images/banner/07 - Payroll System/Hosting Manage (1).jpg')}}" alt="Web Design Services">
                         </div>
                     </div>
                 </div>

@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\Admin\SiteSettingController;
 use App\Http\Controllers\Admin\PartnerController;
+use App\Http\Controllers\Frontend\PartnerRegistrationController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Artisan;
 
@@ -61,7 +62,7 @@ Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/blog/detail', [BlogController::class, 'detail'])->name('blog.detail');
 Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
 Route::get('/partners', [HomeController::class, 'partner'])->name('partner');
-
+Route::resource('partner/reg', PartnerRegistrationController::class);
 
 
 
@@ -69,7 +70,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // Routes that require email verification
     Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
     Route::get('/site-setting',[SiteSettingController::class,'SiteSetting'])->name('site.setting');
-
+    Route::resource('partner/register', PartnerController::class);
     Route::resource('users', UserController::class);
     // Role
     Route::resource('products', ProductController::class);
@@ -78,6 +79,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('profile', ProfileController::class);
     Route::resource('product', ProductController::class);
     Route::resource('seo', SeoController::class);
+   
     // Cache Clear
     Route::get('/clear-cache', function() {
         Artisan::call('cache:clear');

@@ -21,21 +21,28 @@ RRP | Orbit
                     <div class="banner-content">
                         <h1 class="title">ERP<span class="theme-gradient">(Enterprise Resource Planning)</span> Solutions</h1>
                         <p class="subtitle">Unify Your Business Operations with a Powerful, Custom ERP System.</p>
-                        <p>
-                             In today’s competitive landscape, managing disconnected systems leads to inefficiencies, data errors, and lost productivity. Our ERP (Enterprise Resource Planning) Solutions offer a centralized, fully integrated platform that connects every aspect of your organization—from finance, HR, and supply chain to manufacturing, sales, and inventory. Designed for businesses of all sizes and industries, our ERP software improves workflow, automates core functions, and delivers real-time data for smarter decision-making.
-                             Whether you're a manufacturer, distributor, retailer, or service provider, we build scalable ERP systems tailored to your unique business processes.
+                        <p id="ecommerce-text">
+                             At Integrass, we believe our clients are not just looking for skilled developers; they seek true strategic partners. Our mission is to understand your unique enterprise challenges and solve them with custom ERP software tailored specifically to your needs.
+                                Custom ERP systems are designed to meet the distinct operational and strategic demands of your enterprise. They offer a scalable, personalized approach, integrating all essential business functions and enabling data-driven decisions.
+
+                                In today’s competitive landscape, managing disconnected systems leads to inefficiencies, data errors, and lost productivity. Our ERP (Enterprise Resource Planning) Solutions offer a centralized, fully integrated platform that connects every aspect of your organization—from finance, HR, and supply chain to manufacturing, sales, and inventory. Designed for businesses of all sizes and industries, our ERP software improves workflow, automates core functions, and delivers real-time data for smarter decision-making.
+                                Whether you're a manufacturer, distributor, retailer, or service provider, we build scalable ERP systems tailored to your unique business processes.
+
                         </p>
+                        <div class="banner-btn-group mt--30">
+                                <a href="#" class="rainbow-gradient-btn" onclick="toggleReadMore(event)" id="readMoreBtn"><span>Read More ...</span></a>
+                        </div>
                         <div class="banner-btn-group mt--30">
                             <a class="rainbow-gradient-btn" href="contact.html"><span>Get Started</span></a>
                             <a class="rainbow-gradient-btn rainbow-gradient-btn-2" href="#"><span>Our Features</span></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="banner-thumbnail">
-                        <img src="{{asset('frontend')}}/assets/webdesign/website-devlopment.jpg" alt="Web Design Services">
+                <div class="col-lg-6 py-5 fixed-image">
+                        <div class="">
+                            <img src="{{asset('frontend/assets/images/banner/05 - ERP/ERP.jpeg')}}" alt="Web Design Services">
+                        </div>
                     </div>
-                </div>
             </div>
         </div>
     </section>

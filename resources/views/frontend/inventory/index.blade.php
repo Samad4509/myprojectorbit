@@ -22,10 +22,30 @@ Inventory Page | Orbit
                         <div class="banner-content">
                             <h1 class="title">Inventory <span class="theme-gradient"></span> Management</h1>
                             <p class="subtitle">We provide comprehensive inventory and hotel management systems to streamline operations</p>
-                            <p>Benefits: Reduces waste, improves stock control, and enhances guest experience.
-                                Unique Selling Points: Real-time tracking, reporting features, and integration with POS systems.
-                                Case Study: A hotel client reduced inventory costs by 25% with our management system.
-                                Overall Benefit: Clients will experience improved operational efficiency, reduced costs, and enhanced customer satisfaction, leading to increased profitability.</p>
+                            <p id="ecommerce-text">
+                                Inventory management is all about knowing what you have, where it’s stocked and how much you’ll need. Easier said than done though. That’s where GEP brings value.
+
+                                GEP uses a multiechelon approach to inventory management to enable today’s global, interconnected business operations to prevent stock-outs and improve supply efficiency.
+
+                                With years of experience managing inventory for global market-leading companies, GEP helps clients streamline their inventory through best-in-class processes and highly efficient tools.
+
+                                Why Choose GEP?
+                                GEP's inventory management services optimize your supply chain, from planning and replenishment to advanced techniques like Kanban and Just in Time (JIT). Our experts help you streamline operations, reduce costs and improve customer satisfaction.
+
+
+                                Gain Visibility with Real-Time Inventory Tracking
+                                Our inventory management system offers full visibility into your inventory. You can gain instant visibility into your stock levels, helping you make informed decisions with confidence.
+
+                                Make Smarter Decisions with Accurate Forecasting
+                                We utilize data-driven insights to provide accurate forecasting. This enables you to anticipate demand, prevent stockouts, and avoid overstocking—all of which lead to cost savings and improved sales.
+
+                                Streamline Your Supply Chain for Peak Efficiency
+                                Our inventory services facilitate a smooth supply chain flow. We ensure your products are available when and where they’re needed, enhancing satisfaction and your business reputation.
+                            </p>
+                            
+                            <div class="banner-btn-group mt--30">
+                                <a href="#" class="rainbow-gradient-btn" onclick="toggleReadMore(event)" id="readMoreBtn"><span>Read More ...</span></a>
+                                </div>
                             <div class="banner-btn-group mt--30">
                                 <a class="rainbow-gradient-btn" href="contact.html"><span>Get Started</span></a>
                                 <a class="rainbow-gradient-btn rainbow-gradient-btn-2" href="#features"><span>Our
@@ -33,9 +53,9 @@ Inventory Page | Orbit
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 py-5 fixed-image">
                         <div class="">
-                            <img src="{{asset('frontend')}}/assets/webdesign/website-devlopment.jpg" alt="Web Design Services">
+                            <img src="{{asset('frontend/assets/images/banner/09 - Inventory Management/Inventory Management (1).jpeg')}}" alt="Web Design Services">
                         </div>
                     </div>
                 </div>

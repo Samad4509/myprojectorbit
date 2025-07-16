@@ -22,13 +22,35 @@ Hosting | Orbit
                             <h1 class="title">Hosting <span class="theme-gradient"></span> Site</h1>
                             <p class="subtitle">Our housing site solutions connect buyers and sellers in the real estate
                                 market.</p>
-                            <p>Benefits: Simplifies property listings and enhances user experience.
-                                Unique Selling Points: Advanced search filters, virtual tours, and integrated payment
-                                options.
-                                Testimonial: "The housing site has made it easier for us to connect with potential
-                                buyers." - Real Estate Client
-                                Overall Benefit: Clients will benefit from a streamlined process for buying and selling
-                                properties, leading to faster transactions and increased sales.</p>
+                            <p id="ecommerce-text">
+                                We can host your software in our own data centre and manage the server hardware, networks, operating systems, data backup and disaster recovery planning. Hosting your solution is the easiest way to get up and running with your system and removes the hassle of managing servers and hosting in-house.
+                                That means that you can focus on getting the most out of your software.
+
+                                What we offer
+
+                                We can provide and manage the infrastructure to run your system securely, reducing infrastructure and staffing costs, leaving you to do what you do best: managing your collections.
+
+                                When we host your software, we:
+
+                                Manage the back-up of your data.
+                                Take care of upgrades, ensuring that your system is always up-to-date.
+                                Run professional grade hardware in a secure data centre.
+                                Provide secure access to your software.
+                                Ensure you always have enough storage space.
+
+                                We do all the work
+                                You don’t need an in-house IT team to purchase and set up complex infrastructure for your CMS and collections data storage. We’re also responsible for maintaining the environment – so there’s no work on your side to keep your system up and running.
+
+                                Easier and faster support for your software
+                                We’re responsible for supporting both the software and the hosting environment so we can identify any issues more quickly and have the access we need to resolve issues or requests without third party intervention. Meaning quicker turnaround for you on any support queries.
+
+                                Tailored to the needs of your software
+                                We’ve tailored our hosting services to best serve the specific needs of collections management systems and collections data. That means better performance for your software.
+
+                            </p>
+                            <div class="banner-btn-group mt--30">
+                                <a href="#" class="rainbow-gradient-btn" onclick="toggleReadMore(event)" id="readMoreBtn"><span>Read More ...</span></a>
+                                </div>
                             <div class="banner-btn-group mt--30">
                                 <a class="rainbow-gradient-btn" href="contact.html"><span>Get Started</span></a>
                                 <a class="rainbow-gradient-btn rainbow-gradient-btn-2" href="#features"><span>Our
@@ -38,7 +60,7 @@ Hosting | Orbit
                     </div>
                     <div class="col-lg-6 py-5">
                         <div class="">
-                            <img src="{{asset('frontend')}}/assets/webdesign/website-devlopment.jpg" alt="Web Design Services">
+                            <img src="{{asset('frontend/assets/images/banner/12 - Hosting Manage/Hosting Manage (1).webp')}}" alt="Web Design Services">
                         </div>
                     </div>
                 </div>

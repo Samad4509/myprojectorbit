@@ -21,23 +21,39 @@ HRM | Orbit
                     <div class="banner-content">
                         <h1 class="title">HRM <span class="theme-gradient">Human Resource Management</span> Planning</h1>
                         <p class="subtitle">Our ERP solutions integrate all facets of your business, including finance, HR, manufacturing, and supply chain management.</p>
-                        <p>
-                            Benefits: Automates HR processes, enhances employee engagement, and ensures compliance.
-                            Unique Selling Points: Mobile access, customizable workflows, and robust reporting features.
-                            Case Study: A client in the hospitality industry improved employee retention by 30% after implementing our HRM solution.
-                            Overall Benefit: Clients can expect a more engaged workforce, streamlined HR operations, and improved compliance with labor laws, ultimately leading to a more productive and satisfied team.
+                        <p id="ecommerce-text">
+                            Often our new business relationships start with questions from clients about a specific human resources, policy, or compliance scenario. Or, our clients may need help navigating an employee situation. If this sounds familiar to you, feel free to get in touch - this is how most of our business relationships begin.
+
+                            We work with employers and associations of varying sizes in our home state of Michigan and across the country, helping to build better people practices through the right HR systems.
+                            One of our consultants who is best suited to answer your specific questions will connect with you, and help you through the situation you’re working with.
+                            For more complex HR needs, we’ll work with you to create a scope of work, set expectations, and move forward with your approval.
+
+                            Improving Your HR Business Practices
+                            After we’ve helped you with the specific scenarios that you’re trying to navigate, we’ll often recommend a full HR assessment.
+
+                            During this process, you’ll work with one of our consultants to dig deeper into HR compliance and best practices and implement them throughout your organization in a smooth and intuitive manner.
+                            We’ll help identify improvements in your hiring, onboarding, culture and talent development, recordkeeping, compensation and benefit administration, and safety processes to help you build better systems and comply with any state or federal regulations.
+
+                            HRHazmat - Online HR Training and Courses
+                            HRM is excited to announce the launch of HR Hazmat, our online learning platform for human resource and leadership education that allows users to access training content on-demand, from anywhere. Our online courses currently cover a range of professional development topics, including leadership development, workplace harassment prevention, communications, teamwork, and compliance topics related to human resources.
+
+
                         </p>
+                        <div class="banner-btn-group mt--30">
+                                <a href="#" class="rainbow-gradient-btn" onclick="toggleReadMore(event)" id="readMoreBtn"><span>Read More ...</span></a>
+                                </div>
                         <div class="banner-btn-group mt--30">
                             <a class="rainbow-gradient-btn" href="contact.html"><span>Get Started</span></a>
                             <a class="rainbow-gradient-btn rainbow-gradient-btn-2" href="#features"><span>Our Features</span></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="banner-thumbnail">
-                        <img src="{{asset('frontend')}}/assets/webdesign/website-devlopment.jpg" alt="Web Design Services">
+                <div class="col-lg-6 py-5">
+                    <div class="banner-thumbnail fixed-image">
+                        <img src="{{asset('frontend/assets/images/banner/10 - HRM/HRM (1).jpg')}}" alt="Web Design Services">
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>

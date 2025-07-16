@@ -46,7 +46,7 @@ Multi Vandor Ecommerce |App
                     </div>
                     <div class="col-lg-6 py-5">
                         <div class="banner-thumbnail">
-                            <img src="{{asset('frontend')}}/assets/webdesign/website-devlopment.jpg" alt="Web Design Services">
+                            <img src="{{asset('frontend/assets/images/banner/01 - Multi Vendor Ecommerce/E-commerce1.jpg')}}" alt="Web Design Services">
                         </div>
                     </div>
                 </div>
