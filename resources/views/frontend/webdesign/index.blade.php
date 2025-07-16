@@ -22,10 +22,13 @@ Web Design And Development | Orbit
                     
                     <h1 class="title">Web Design  <span class="theme-gradient">&</span> Development</h1>
                     <p class="subtitle">Custom-Built Websites That Captivate, Convert, and Elevate Your Bran</p>
-                    <p>
+                    <p id="ecommerce-text">
                         Your website is often the first impression your audience gets of your business—make it count. Our Professional Web Design Services are tailored to create visually appealing, responsive, and SEO-optimized websites that reflect your brand identity and engage your audience across all devices.
                         From sleek corporate websites to high-converting eCommerce platforms, we deliver custom web design solutions that are easy to navigate, fast to load, and built for results. Whether you’re a startup, small business, or growing enterprise, our team will help you stand out online and turn clicks into customers.
                     </p>
+                     <div class="banner-btn-group mt--30">
+                                <a href="#" class="rainbow-gradient-btn" onclick="toggleReadMore(event)" id="readMoreBtn"><span>Read More ...</span></a>
+                                </div>
                     <div class="banner-btn-group mt--30">
                         <a class="rainbow-gradient-btn" href="contact.html"><span>Get Started</span></a>
                         <a class="rainbow-gradient-btn rainbow-gradient-btn-2" href="#features"><span>Our Features</span></a>
@@ -33,7 +36,7 @@ Web Design And Development | Orbit
                 </div>
             </div>
             <div class="col-lg-6 py-5">
-                <div class="banner-thumbnail">
+                <div class="banner-thumbnail fixed-image">
                     <img src="{{asset('frontend')}}/assets/webdesign/website-devlopment.jpg" alt="Web Design Services">
                 </div>
             </div>

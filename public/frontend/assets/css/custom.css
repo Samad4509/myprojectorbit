@@ -280,19 +280,6 @@
             line-height: 1.5;
         }
         
-        .read-more {
-            color: #6c5ce7;
-            font-weight: 500;
-            text-decoration: none;
-            font-size: 14px;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-        
-        .read-more:hover {
-            color: #5649c0;
-            text-decoration: underline;
-        }
         
         /* Pagination Styles */
         .pagination-area {
@@ -912,53 +899,7 @@ body {
 }
 
 /* Expanded state shows all content */
-#ecommerce-text.expanded {
-  -webkit-line-clamp: unset;
-  max-height: 1000px; /* Arbitrary large value to show all content */
-}
 
-/* Read More/Less button styling */
-.read-toggle {
-  color: #0066cc;
-  cursor: pointer;
-  font-weight: bold;
-  display: inline-block;
-  margin-top: 8px;
-  background: none;
-  border: none;
-  padding: 0;
-}
-
-.read-toggle:hover {
-  text-decoration: underline;
-}
-
-/* Gradient fade effect (optional) */
-.text-container {
-  position: relative;
-}
-
-.text-container:not(.expanded)::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2em;
-  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
-  pointer-events: none;
-}
-
-/* Error animation */
-.field-error {
-  animation: shake 0.5s;
-}
-
-@keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  20%, 60% { transform: translateX(-5px); }
-  40%, 80% { transform: translateX(5px); }
-}
 
 /* Become a Partner Section */
 
@@ -968,4 +909,19 @@ body {
     top: 80px; /* adjust as needed */
     align-self: start;
     z-index: 1;
+}
+
+#ecommerce-text.collapsed {
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* limit to 5 lines */
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 7.5em; /* Adjust if needed */
+}
+
+#ecommerce-text.expanded {
+  display: block;
+  max-height: none;
+  -webkit-line-clamp: unset;
 }

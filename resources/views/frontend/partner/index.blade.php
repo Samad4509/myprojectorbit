@@ -62,7 +62,7 @@
 
     /* ========== Hero Section ========== */
     .partner-hero {
-        background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.95)),
+        background: linear-gradient(135deg, rgba(15, 23, 42, 0), rgba(15, 23, 42, 0)),
                     url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
         background-size: cover;
         background-position: center;
@@ -76,6 +76,7 @@
         border-radius: var(--border-radius);
         box-shadow: var(--box-shadow);
         border: 1px solid var(--border-color);
+      
     }
 
     .partner-hero::after {
@@ -543,39 +544,38 @@
                     <p>Thank you for your interest in partnering with us. Our team will review your application and
                         respond within 2 business days.</p>
                 </div>
-
-                <form id="register" action="{{ route('reg.store') }}" method="post" novalidate>
-                    @csrf
-
+               <form id="register" method="post" novalidate>
                     <p class="text-center text-success fw-bolter">{{ session('message') }}</p>
+                    @csrf
 
                     <div class="form-group">
                         <label for="companyName">Company Name *</label>
-                        <input type="text" id="companyName" name="companyName" placeholder="Your company name">
-                        <div class="error-message text-danger"></div>
+                        <input type="text" id="companyName" name="companyName" 
+                            placeholder="Your company name" required>
+                        <div class="error-message"></div>
                     </div>
 
                     <div class="form-group">
                         <label for="fullName">Your Full Name *</label>
-                        <input type="text" id="fullName" name="fullName" placeholder="First and last name">
-                        <div class="error-message text-danger"></div>
+                        <input type="text" id="fullName" name="fullName" placeholder="First and last name" required>
+                        <div class="error-message"></div>
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" placeholder="Your business email">
-                        <div class="error-message text-danger"></div>
+                        <input type="email" id="email" name="email" placeholder="Your business email" required>
+                        <div class="error-message"></div>
                     </div>
 
                     <div class="form-group">
                         <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+1 (123) 456-7890">
-                        <div class="error-message text-danger"></div>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (123) 456-7890" required>
+                        <div class="error-message"></div>
                     </div>
 
                     <div class="form-group">
                         <label for="businessType">Type of Business *</label>
-                        <select id="businessType" name="businessType">
+                        <select id="businessType" name="businessType" required>
                             <option value="">Select your business type</option>
                             <option value="agency">Digital Agency</option>
                             <option value="freelancer">Freelancer/Consultant</option>
@@ -583,33 +583,35 @@
                             <option value="saas">SaaS Company</option>
                             <option value="other">Other</option>
                         </select>
-                        <div class="error-message text-danger"></div>
+                        <div class="error-message"></div>
                     </div>
 
                     <div class="form-group">
                         <label for="website">Website (if applicable)</label>
                         <input type="url" id="website" name="website" placeholder="https://yourwebsite.com">
-                        <div class="error-message text-danger"></div>
+                        <div class="error-message"></div>
                     </div>
 
                     <div class="form-group">
                         <label for="message">Tell us about your business *</label>
-                        <textarea id="message" name="message" placeholder="Describe your business, clients, and why you want to partner with us"></textarea>
-                        <div class="error-message text-danger"></div>
+                        <textarea id="message" name="message" 
+                            placeholder="Describe your business, clients, and why you want to partner with us" required></textarea>
+                        <div class="error-message"></div>
                     </div>
 
                     <div class="checkbox-group">
-                        <input type="checkbox" id="agree" name="agree">
-                        <label for="agree">I agree to the <a href="#" id="termsLink">Terms and Conditions</a> and Privacy Policy</label>
-                        <div class="error-message text-danger"></div>
+                        <input type="checkbox" id="agree" name="agree" required>
+                        <label for="agree">I agree to the <a href="#" id="termsLink">Terms and Conditions</a>
+                            and Privacy Policy</label>
+                        <div class="error-message"></div>
                     </div>
 
                     <button type="submit" class="form-submit-btn">
                         <span id="submitText">Submit Application</span>
-                        <span id="spinner" style="display:none;"><i class="fas fa-spinner fa-spin"></i> Processing...</span>
+                        <span id="spinner" style="display:none;"><i class="fas fa-spinner fa-spin"></i>
+                            Processing...</span>
                     </button>
                 </form>
-
             </div>
 
             <!-- Terms Column -->

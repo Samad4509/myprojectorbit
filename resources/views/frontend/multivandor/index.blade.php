@@ -24,10 +24,13 @@ Multi Vandor Ecommerce |App
                             <p class="subtitle">Launch a Scalable Online Marketplace with Multiple Sellers & Unlimited Potential</p>
                             {{-- <p class="subtitle">Our multi-vendor e-commerce platform allows multiple sellers to showcase
                                 their products in one marketplace.</p> --}}
-                            <p>
+                            <p id="ecommerce-text">
                                 Our Multi-Vendor E-commerce platform empowers you to create a robust online marketplace where multiple vendors can register, list their products, manage sales, and deliver a seamless shopping experience under one unified brand. Whether you're building a niche marketplace or a large-scale platform, we provide end-to-end multi-seller eCommerce solutions tailored for high performance, flexibility, and scalability.With powerful vendor management tools, customizable storefronts, and automated commission tracking, our platform gives you everything you need to attract more sellers, reach more customers, and grow revenue—fast.
 
                             </p>
+                            <div class="banner-btn-group mt--30">
+                                <a href="#" class="rainbow-gradient-btn" onclick="toggleReadMore(event)" id="readMoreBtn"><span>Read More ...</span></a>
+                                </div>
                             {{-- <p>
                                 Benefits: Expands product offerings and increases revenue potential.
                                 Unique Selling Points: Vendor management tools, commission tracking, and customizable
@@ -44,7 +47,7 @@ Multi Vandor Ecommerce |App
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 py-5">
+                    <div class="col-lg-6 py-5 fixed-image">
                         <div class="banner-thumbnail">
                             <img src="{{asset('frontend/assets/images/banner/01 - Multi Vendor Ecommerce/E-commerce1.jpg')}}" alt="Web Design Services">
                         </div>

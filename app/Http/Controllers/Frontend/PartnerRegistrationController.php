@@ -33,43 +33,36 @@ class PartnerRegistrationController extends Controller
      */
 public function store(Request $request)
 {
-    $validated = $request->validate([
+    $request->validate([
         'companyName' => 'required|string|max:255',
-        'fullName' => 'required|string|max:255',
-        'email' => 'required|email|max:255',
+        'fullName' => 'required|string|max:255',  // Assuming you want a separate fullName field
+        'email' => 'required|email|unique:partner_registers,email',
         'phone' => 'required|string|max:20',
         'businessType' => 'required|string|max:255',
-        'website' => 'nullable|url',
-        'message' => 'required|string',
+        'website' => 'nullable|url|max:255',
+        'message' => 'nullable|string',
         'agree' => 'accepted',
-    ], [
-        // Custom messages for each field and rule
-        'companyName.required' => 'The company name field is required.',
-        'fullName.required' => 'Your full name is required.',
-        'email.required' => 'Please provide your email address.',
-        'email.email' => 'Please enter a valid email address.',
-        'phone.required' => 'A phone number is required.',
-        'businessType.required' => 'Please select your business type.',
-        'website.url' => 'Please enter a valid website URL (e.g., https://example.com).',
-        'message.required' => 'Please tell us about your business.',
-        'agree.accepted' => 'You must agree to the terms and conditions.',
     ]);
 
     $partner = new PartnerRegister();
-    $partner->company_name = $validated['companyName'];
-    $partner->fullName = $validated['fullName'];
-    $partner->email = $validated['email'];
-    $partner->phone = $validated['phone'];
-    $partner->businessType = $validated['businessType'];
-    $partner->website = $validated['website'] ?? null;
-    $partner->message = $validated['message'];
-    $partner->agree = true; // Since validation passed, we know they agreed
+    $partner->company_name = $request->companyName;
+    $partner->fullName = $request->fullName;  // Corrected to fullName
+    $partner->email = $request->email;
+    $partner->phone = $request->phone;
+    $partner->businessType = $request->businessType;
+    $partner->website = $request->website;
+    $partner->message = $request->message;
+    $partner->agree = $request->agree;  // Save based on user input
     $partner->save();
 
     Mail::to('samadaiub@gmail.com')->send(new PartnerRegistered($partner));
 
-    return response()->json(['message' => 'Partner registered successfully'], 200);
+    return response()->json([
+        'status' => true,
+        'message' => 'Partner registered successfully'
+    ]);
 }
+
 
     /**
      * Display the specified resource.

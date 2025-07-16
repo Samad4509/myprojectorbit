@@ -161,94 +161,72 @@
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-$(document).ready(function() {
-    $('#register').on('submit', function(e) {
-        e.preventDefault();
+    $(document).ready(function() {
+        $('#register').on('submit', function(e) {
+            e.preventDefault();
 
-        // Clear previous errors
-        $('.error-message').text('');
-        $('input, select, textarea').removeClass('is-invalid');
+            $('#submitText').hide();
+            $('#spinner').show();
 
-        // Toggle button states
-        $('#submitText').hide();
-        $('#spinner').show();
+            let formData = {
+                companyName: $('#companyName').val(),
+                fullName: $('#fullName').val(),
+                email: $('#email').val(),
+                phone: $('#phone').val(),
+                businessType: $('#businessType').val(),
+                website: $('#website').val(),
+                message: $('#message').val(),
+                agree: $('#agree').is(':checked') ? '1' : '0',
+                _token: '{{ csrf_token() }}'
+            };
 
-        // Prepare form data
-        let formData = {
-            companyName: $('#companyName').val(),
-            fullName: $('#fullName').val(),
-            email: $('#email').val(),
-            phone: $('#phone').val(),
-            businessType: $('#businessType').val(),
-            website: $('#website').val(),
-            message: $('#message').val(),
-            agree: $('#agree').is(':checked') ? '1' : '0',
-            _token: '{{ csrf_token() }}'
-        };
+            $.ajax({
+                url: "{{ route('reg.store') }}",
+                method: "POST",
+                data: formData,
+                success: function(res) {
+                    $('#spinner').hide();
+                    $('#submitText').show();
 
-        $.ajax({
-            url: "{{ route('reg.store') }}",
-            method: "POST",
-            data: formData,
-            success: function(response) {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Success!',
-                    text: response.message,
-                    confirmButtonColor: '#3085d6',
-                }).then(() => {
-                    $('#register')[0].reset();
-                });
-            },
-            error: function(xhr) {
-                if(xhr.status === 422) {
-                    let errors = xhr.responseJSON.errors;
+                    if (res.status === true) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Success!',
+                            text: res.message
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: 'warning',
+                            title: 'Notice',
+                            text: 'Something went wrong. Please try again.'
+                        });
+                        console.warn('Unexpected response format:', res);
+                    }
+                },
+                
+            });
 
-                    $.each(errors, function(field, messages) {
-                        let fieldElement = $('[name="' + field + '"]');
-                        let errorElement = fieldElement.closest('.form-group, .checkbox-group').find('.error-message');
-                        errorElement.text(messages[0]);
-                        fieldElement.addClass('is-invalid');
-                    });
-
-                    let firstError = Object.values(errors)[0][0];
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Validation Error',
-                        text: firstError,
-                        confirmButtonColor: '#d33',
-                    });
-                } else {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Error',
-                        text: 'Something went wrong. Please try again.',
-                        confirmButtonColor: '#d33',
-                    });
-                }
-            },
-            complete: function() {
-                $('#submitText').show();
-                $('#spinner').hide();
-            }
         });
     });
-});
 </script>
-
 <script>
-    function toggleReadMore() {
-  const textElement = document.getElementById('ecommerce-text');
-  const button = document.querySelector('.read-toggle');
-  
-  textElement.classList.toggle('expanded');
-  
-  if (textElement.classList.contains('expanded')) {
-    button.textContent = 'Read Less';
+    function toggleReadMore(event) {
+  event.preventDefault();
+
+  const text = document.getElementById('ecommerce-text');
+  const btn = document.getElementById('readMoreBtn');
+
+  if (text.classList.contains('collapsed')) {
+    text.classList.remove('collapsed');
+    text.classList.add('expanded');
+    btn.innerHTML = '<span>Read Less</span>';
   } else {
-    button.textContent = 'Read More';
+    text.classList.remove('expanded');
+    text.classList.add('collapsed');
+    btn.innerHTML = '<span>Read More ...</span>';
   }
 }
+
 </script>
 </body>
 
