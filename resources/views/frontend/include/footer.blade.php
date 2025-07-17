@@ -158,13 +158,16 @@
         }
     });
 </script>
-
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-    $(document).ready(function() {
-        $('#register').on('submit', function(e) {
+    $(document).ready(function () {
+        $('#register').on('submit', function (e) {
             e.preventDefault();
 
+            // Clear previous error messages
+            $('.error-message').text('').removeClass('error-visible');
+
+            // Show spinner
             $('#submitText').hide();
             $('#spinner').show();
 
@@ -176,7 +179,7 @@
                 businessType: $('#businessType').val(),
                 website: $('#website').val(),
                 message: $('#message').val(),
-                agree: $('#agree').is(':checked') ? '1' : '0',
+                agree: $('#agree').is(':checked') ? '1' : '',
                 _token: '{{ csrf_token() }}'
             };
 
@@ -184,28 +187,50 @@
                 url: "{{ route('reg.store') }}",
                 method: "POST",
                 data: formData,
-                success: function(res) {
-                    $('#spinner').hide();
+                success: function (res) {
                     $('#submitText').show();
+                    $('#spinner').hide();
 
                     if (res.status === true) {
                         Swal.fire({
                             icon: 'success',
-                            title: 'Success!',
+                            title: 'Application Submitted',
                             text: res.message
+                        });
+                        $('#register')[0].reset();
+                    }
+                },
+                error: function (xhr) {
+                    $('#submitText').show();
+                    $('#spinner').hide();
+
+                    if (xhr.status === 422) {
+                        const errors = xhr.responseJSON.errors;
+
+                        // Display errors for each field
+                        $.each(errors, function (field, messages) {
+                            // For most fields (inside form-group)
+                            if (field !== 'agree') {
+                                $('[name="' + field + '"]').closest('.form-group').find('.error-message')
+                                    .text(messages[0])
+                                    .addClass('error-visible');
+                            }
+                            // Special handling for checkbox (inside checkbox-group)
+                            else {
+                                $('#agree').closest('.checkbox-group').find('.error-message')
+                                    .text(messages[0])
+                                    .addClass('error-visible');
+                            }
                         });
                     } else {
                         Swal.fire({
-                            icon: 'warning',
-                            title: 'Notice',
-                            text: 'Something went wrong. Please try again.'
+                            icon: 'error',
+                            title: 'Oops!',
+                            text: xhr.responseJSON.message || 'Something went wrong. Please try again later.'
                         });
-                        console.warn('Unexpected response format:', res);
                     }
-                },
-                
+                }
             });
-
         });
     });
 </script>

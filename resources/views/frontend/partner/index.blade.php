@@ -463,17 +463,11 @@
             font-size: 0.9rem;
         }
     }
-    .error-message {
-    color: var(--error-color); /* Using the error color variable */
-    font-size: 0.85rem;
-    margin-top: 0.5rem;
-    padding: 0.5rem;
-    background-color: rgba(239, 68, 68, 0.1); /* Light red background */
-    border-left: 3px solid var(--error-color);
-    border-radius: 0 4px 4px 0;
-    display: none; /* Hidden by default */
-    animation: fadeIn 0.3s ease-out;
-    line-height: 1.4;
+ .error-message {
+    color: #dc3545;
+    font-size: 0.875em;
+    display: block;
+    margin-top: 5px;
 }
 </style>
 
@@ -671,6 +665,4 @@
     </section>
 </div>
 
-<!-- Font Awesome for icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 @endsection
