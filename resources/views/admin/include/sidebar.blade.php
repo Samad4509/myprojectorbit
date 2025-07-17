@@ -46,7 +46,7 @@
             <div class="collapse" id="product" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
                     <a class="nav-link" href="{{route('product.create')}}"><i class="fas fa-plus-circle me-2"></i>Create Product</a>
-                    <a class="nav-link" href="layout-sidenav-light.html"><i class="fas fa-boxes me-2"></i>Manage Product</a>
+                    <a class="nav-link" href="{{route('product.index')}}"><i class="fas fa-boxes me-2"></i>Manage Product</a>
                 </nav>
             </div>
             

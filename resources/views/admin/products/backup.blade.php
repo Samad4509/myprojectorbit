@@ -8,7 +8,8 @@
             <div class="box-header with-border">
               <h3 class="box-title">Create Product</h3>
             </div>
-            <form method="POST" enctype="multipart/form-data">
+            <form method="POST" accept="{{route('products.store')}}"enctype="multipart/form-data">
+              @csrf
               <div class="box-body">
 
                 <div class="row">
@@ -16,13 +17,13 @@
                     <label for="ProductName">Product Name</label>
                     <input type="text" class="form-control" id="ProductName" name="Product_name" required>
                   </div>
-                  <div class="form-group col-sm-6">
+                  {{-- <div class="form-group col-sm-6">
                     <label for="seoTitle">SEO Title</label>
                     <input type="text" class="form-control" id="seoTitle" name="seo_title">
                   </div>
-                </div>
+                </div> --}}
 
-                <div class="row">
+                {{-- <div class="row">
                   <div class="form-group col-sm-6">
                     <label for="seoKeywords">SEO Keywords</label>
                     <input type="text" class="form-control" id="metaKeywords" name="seo_keywords">
@@ -40,7 +41,7 @@
                 <div class="form-group">
                   <label for="summernote">Long Description</label>
                   <textarea id="summernote" name="long_description" class="form-control" rows="5"></textarea>
-                </div>
+                </div> --}}
 
               </div>
 

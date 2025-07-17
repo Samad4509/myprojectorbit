@@ -86,13 +86,13 @@
                             </a>
                         </div>
                     </div>
-
+{{-- {{dd($products)}} --}}
                     <div class="col-lg-8 d-none d-lg-block">
                         <nav class="mainmenu-nav d-none d-lg-flex justify-content-center">
                             <ul class="mainmenu">
                                 <li><a href="{{route('home')}}">Home</a></li>
                                 <li><a href="{{route('about')}}">About</a></li>
-                                <li class="has-dropdown has-menu-child-item position-relative"><a
+                                {{-- <li class="has-dropdown has-menu-child-item position-relative"><a
                                         href="{{route('all.products')}}">Products</a>
                                     <ul class="submenu">
                                         <li>
@@ -157,6 +157,18 @@
                                             </a>
                                         </li>
                                     </ul>
+                                </li> --}}
+                                <li class="has-dropdown has-menu-child-item position-relative">
+                                    <a href="{{ route('all.products') }}">Products</a>
+                                    <ul class="submenu">
+                                        @foreach($products as $product)
+                                            <li>
+                                                <a href="{{route('ecommerce.app')}}">
+                                                    <span>{{ $product['product_name'] }}</span>
+                                                </a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
                                 </li>
                                 <li class="has-dropdown has-menu-child-item position-relative"><a
                                         href="{{route('service')}}">Service</a>
@@ -172,11 +184,6 @@
                                                 <span>Mobile Application</span>
                                             </a>
                                         </li>
-                                        {{-- <li>
-                                            <a href="service-detail.html">
-                                                <span>Development</span>
-                                            </a>
-                                        </li> --}}
                                         <li>
                                             <a href="{{route('desktop')}}">
                                                 <span>Desktop Application</span>
@@ -204,7 +211,7 @@
                             <!-- Start Header Btn  -->
                             <div class="header-btn">
                                 <a class="rainbow-gradient-btn" target="_blank"
-                                    href="login.html"><span>Login</span></a>
+                                    href="{{route('login')}}"><span>Login</span></a>
                             </div>
                             <!-- End Header Btn  -->
 
@@ -354,7 +361,7 @@
 
                 <!-- Start Header Btn  -->
                 <div class="header-btn d-block d-md-none">
-                    <a class="btn-default @@btnClass" target="_blank" href="login.html">Login</a>
+                    <a class="btn-default @@btnClass" target="_blank" href="{{route('login')}}">Login</a>
                 </div>
                 <!-- End Header Btn  -->
             </div>
