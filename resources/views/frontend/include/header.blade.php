@@ -162,8 +162,10 @@
                                     <a href="{{ route('all.products') }}">Products</a>
                                     <ul class="submenu">
                                         @foreach($products as $product)
+
+                                        
                                             <li>
-                                                <a href="{{route('ecommerce.app')}}">
+                                                <a href="{{route('product.show',$product->id)}}">
                                                     <span>{{ $product['product_name'] }}</span>
                                                 </a>
                                             </li>

@@ -17,8 +17,12 @@ use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\Admin\SiteSettingController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Frontend\PartnerRegistrationController;
+use App\Http\Controllers\Admin\FeaturesController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\Admin\AllProductsController;
+use App\Http\Controllers\Admin\ProductFeactController;
+use App\Http\Controllers\Frontend\ProductsDetailsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,6 +69,11 @@ Route::get('/partners', [HomeController::class, 'partner'])->name('partner');
 Route::resource('partner/reg', PartnerRegistrationController::class);
 
 
+// routes/web.php
+
+Route::get('/product/{id}', [ProductsDetailsController::class, 'show'])->name('product.show');
+
+
 
 Route::middleware(['auth', 'verified'])->group(function () {
     // Routes that require email verification
@@ -72,6 +81,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/site-setting',[SiteSettingController::class,'SiteSetting'])->name('site.setting');
     Route::resource('partner/register', PartnerController::class);
     Route::resource('users', UserController::class);
+    Route::resource('features',  FeaturesController::class);
     // Role
     Route::resource('products', ProductController::class);
     Route::resource('roles', RoleController::class);
@@ -79,7 +89,17 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('profile', ProfileController::class);
     Route::resource('product', ProductController::class);
     Route::resource('seo', SeoController::class);
+    Route::resource('itemfeaturs', ProductFeactController::class);
    
+
+    Route::get('all/products/create',[AllProductsController::class,'index'])->name('all.create');
+    Route::get('all/products/manage',[AllProductsController::class,'manage'])->name('all.manage');
+    Route::post('all/products/store',[AllProductsController::class,'store'])->name('all.store');
+    Route::get('all/products/edit/{id}',[AllProductsController::class,'edit'])->name('all.edit');
+    Route::post('all/products/update/{id}', [AllProductsController::class, 'update'])->name('all.update');
+    Route::delete('all/products/delete/{id}', [AllProductsController::class, 'destroy'])->name('all.destroy');
+
+
     // Cache Clear
     Route::get('/clear-cache', function() {
         Artisan::call('cache:clear');

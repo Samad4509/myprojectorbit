@@ -45,8 +45,34 @@
             </a>
             <div class="collapse" id="product" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="{{route('product.create')}}"><i class="fas fa-plus-circle me-2"></i>Create Product</a>
-                    <a class="nav-link" href="{{route('product.index')}}"><i class="fas fa-boxes me-2"></i>Manage Product</a>
+                    <a class="nav-link" href="{{route('products.create')}}"><i class="fas fa-plus-circle me-2"></i>Create Product</a>
+                    <a class="nav-link" href="{{route('products.index')}}"><i class="fas fa-boxes me-2"></i>Manage Product</a>
+                </nav>
+            </div>
+            <!-- Product Section -->
+            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#feature" aria-expanded="false" aria-controls="collapseLayouts">
+                <div class="sb-nav-link-icon"><i class="fas fa-box-open"></i></div>
+                Features
+                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-chevron-down"></i></div>
+            </a>
+            <div class="collapse" id="feature" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                <nav class="sb-sidenav-menu-nested nav">
+                    <a class="nav-link" href="{{route('features.create')}}"><i class="fas fa-plus-circle me-2"></i>Create Features</a>
+                    <a class="nav-link" href="{{route('features.index')}}"><i class="fas fa-boxes me-2"></i>Manage Features</a>
+                </nav>
+            </div>
+            <!-- Product Section -->
+            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#productitem" aria-expanded="false" aria-controls="collapseLayouts">
+                <div class="sb-nav-link-icon"><i class="fas fa-box-open"></i></div>
+                Products Item
+                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-chevron-down"></i></div>
+            </a>
+            <div class="collapse" id="productitem" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                <nav class="sb-sidenav-menu-nested nav">
+                    <a class="nav-link" href="{{route('all.create')}}"><i class="fas fa-plus-circle me-2"></i>Create Product</a>
+                    <a class="nav-link" href="{{route('all.manage')}}"><i class="fas fa-boxes me-2"></i>Manage Product</a>
+                    <a class="nav-link" href="{{route('itemfeaturs.create')}}"><i class="fas fa-boxes me-2"></i>Feature Create</a>
+                    <a class="nav-link" href="{{route('itemfeaturs.index')}}"><i class="fas fa-boxes me-2"></i>Feature Manage</a>
                 </nav>
             </div>
             

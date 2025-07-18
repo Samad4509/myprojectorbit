@@ -19,27 +19,12 @@ E-commerce with app | Orbit
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="banner-content">
-                            <h1 class="title">E-commerce <span class="theme-gradient">With</span> App</h1>
+                            <h1 class="title">{{$item->banner_title}}</h1>
                             {{-- <p class="subtitle">Our e-commerce solutions include mobile applications for a seamless
                                 shopping experience.</p> --}}
-                            <p class="subtitle">Launch Your Online Store with Seamless Mobile Integration.</p>
+                            <p class="subtitle">{{$item->banner_subtitle}}</p>
                                 <p id="ecommerce-text">
-                                    As a leading ecommerce application development company, we specialize in crafting bespoke solutions that propel your brand to new heights. So partner with TekRevol and unlock the potential of your online business with our innovative solutions and expertise in e-commerce mobile app development. Gain 10X conversions through digitizing your businesses with our custom Ecommerce application development.
-                                    Business Empowering Ecommerce App Development Services
-                                    The world is currently witnessing an e-commerce boom, and do you know what's driving this boom? Ecommerce Apps! E-commerce helps drive maximum conversions to your business by becoming a single point where customers can view all of your products and their related information with easy payment methods. As a leading ecommerce mobile app development company, TekRevol has played its part in allowing businesses to gain an impressive increase in conversions and engagement.
-                                    With its quality-enriched e-commerce mobile app development services, clients can see their app ideas transit into reality. We have an in-house team of e-commerce app developers who know exactly how to structure these types of apps to drive home a stellar experience for users. TekRevol is hands down your go-to place for ecommerce application development services.
-
-                                    How Many Types of Ecommerce Apps Can We Develop?
-                                    Ecommerce apps are not just useful for B2C businesses. They are now being used and developed to suit all kinds of digital consumer interactions. Whatever you sell, you can do it through an Ecommerce app.
-
-
-                                    Being a top-rated Ecommerce app development company, we can offer the following kinds of Ecommerce application development solutions for you:
-                                    Consumer To Consumer
-                                    E-Marketplace
-                                    Business to Business
-                                    Business To Consumer
-                                    Second Hand Goods Marketplace
-
+                                    {{$item->banner_description}}
                                 </p>
 
                                 <div class="banner-btn-group mt--30">
@@ -55,7 +40,7 @@ E-commerce with app | Orbit
                     </div>
                     <div class="col-lg-6 py-5 fixed-image">
                         <div class="">
-                            <img src="{{asset('frontend/assets/images/banner/02 - Multi Vendor Ecommerce/Multi Vendor Ecommerce (1).jpg')}}" alt="Web Design Services">
+                            <img src="{{asset($item->banner_image)}}" alt="Web Design Services">
                         </div>
                     </div>
                 </div>
@@ -66,104 +51,10 @@ E-commerce with app | Orbit
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <div class="col-md-8 bg-dark card card-body mx-auto py-5">
-                            <h5 class="mb-4 mx-auto text-white">E-commerce With App</h5>
+                        <div class="col- bg-dark card card-body mx-auto py-5">
+                            <h5 class="mb-4 mx-auto text-white">{{$item->banner_title}}</h5>
                             <div class="row">
-                                <div class="col-md-6">
-                                    <div class="list-unstyled">
-                                        <li class="mb-2">
-                                            <a href="ecommerce-with-app.html" class="text-decoration-none">
-                                                <i class="fa fa-check me-2 text-success"></i>Dynamic eCommerce
-                                                Management Panel
-                                            </a>
-                                        </li>
-                                        <li class="mb-2">
-                                            <a href="ecommerce-with-app.html" title="Customized Website Design"
-                                                class="text-decoration-none">
-                                                <i class="fa fa-check me-2 text-success"></i>Customized Responsive
-                                                Design
-                                            </a>
-                                        </li>
-                                        <li class="mb-2">
-                                            <a href="ecommerce-with-app.html" class="text-decoration-none">
-                                                <i class="fa fa-check me-2 text-success"></i>Clear, User-friendly
-                                                Navigation
-                                            </a>
-                                        </li>
-                                        <li class="mb-2">
-                                            <a href="ecommerce-with-app.html" class="text-decoration-none">
-                                                <i class="fa fa-check me-2 text-success"></i>Returns and Refunds
-                                                Management System
-                                            </a>
-                                        </li>
-                                        <li class="mb-2">
-                                            <a href="ecommerce-with-app.html" class="text-decoration-none">
-                                                <i class="fa fa-check me-2 text-success"></i>Online and Offline (POS)
-                                                Shop Management System
-                                            </a>
-                                        </li>
-                                        <li class="mb-2">
-                                            <a href="ecommerce-with-app.html" class="text-decoration-none">
-                                                <i class="fa fa-check me-2 text-success"></i>Customer Management System
-                                            </a>
-                                        </li>
-
-                                        <li class="mb-2">
-                                            <a href="ecommerce-with-app.html" class="text-decoration-none">
-                                                <i class="fa fa-check me-2 text-success"></i>Product Catalogue
-                                                Management
-                                            </a>
-                                        </li>
-                                        <li class="mb-2">
-                                            <a href="ecommerce-with-app.html" class="text-decoration-none">
-                                                <i class="fa fa-check me-2 text-success"></i>eCommerce Shipping Delivery
-                                                Gateway Integration
-                                            </a>
-                                        </li>
-                                        <li class="mb-2">
-                                            <a href="ecommerce-with-app.html" class="text-decoration-none">
-                                                <i class="fa fa-check me-2 text-success"></i>Multiple payment options
-                                            </a>
-                                        </li>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <ul class="list-unstyled">
-                                        <li class="mb-2">
-                                            <a href="ecommerce-with-app.html" class="text-decoration-none">
-                                                <i class="fa fa-check me-2 text-success"></i>eCommerce Apps Development
-                                            </a>
-                                        </li>
-                                        <li class="mb-2">
-                                            <a href="ecommerce-with-app.html" class="text-decoration-none">
-                                                <i class="fa fa-check me-2 text-success"></i>eCommerce Promotion and
-                                                Discount
-                                            </a>
-                                        </li>
-                                        <li class="mb-2">
-                                            <a href="ecommerce-with-app.html" class="text-decoration-none">
-                                                <i class="fa fa-check me-2 text-success"></i>Clear & User-friendly
-                                                Design
-                                            </a>
-                                        </li>
-                                        <li class="mb-2">
-                                            <a href="ecommerce-with-app.html" class="text-decoration-none">
-                                                <i class="fa fa-check me-2 text-success"></i>Payment Gateway Integration
-                                            </a>
-                                        </li>
-                                        <li class="mb-2">
-                                            <a href="ecommerce-with-app.html" class="text-decoration-none">
-                                                <i class="fa fa-check me-2 text-success"></i>eCommerce Product Barcode
-                                            </a>
-                                        </li>
-                                        <li class="mb-2">
-                                            <a href="ecommerce-with-app.html" class="text-decoration-none">
-                                                <i class="fa fa-check me-2 text-success"></i>eCommerce Reporting Tools
-                                            </a>
-                                        </li>
-
-                                    </ul>
-                                </div>
+                                <td class="bg-dark">{!! $item->product_features !!}</td>
                             </div>
                             <div class="banner-btn-group mt--30 mx-auto">
                                 <a class="rainbow-gradient-btn" href="{{route('contact')}}"><span>Contact us</span></a>

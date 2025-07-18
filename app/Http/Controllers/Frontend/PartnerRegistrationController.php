@@ -55,7 +55,7 @@ public function store(Request $request)
     $partner->agree = $request->agree;  // Save based on user input
     $partner->save();
 
-    Mail::to('test@theorbit.one')->send(new PartnerRegistered($partner));
+    Mail::to('partner@theorbit.one')->send(new PartnerRegistered($partner));
 
     return response()->json([
         'status' => true,
