@@ -9,17 +9,19 @@ class ItemProduct extends Model
 {
     use HasFactory;
      protected $fillable = [
-        'product_id',
-        'banner_title',
-        'banner_subtitle',
-        'banner_description',
-        'product_features',
-        'banner_image',
-        'tech_images',
-        'meta_title',
-        'meta_keywords',
-        'meta_description',
-    ];
+    'product_id',
+    'product_image',
+    'banner_title',
+    'banner_subtitle',
+    'banner_description',
+    'product_features',
+    'banner_image',
+    'tech_title',
+    'tech_images',
+    'meta_title',
+    'meta_keywords',
+    'meta_description',
+];
 
     protected $casts = [
         'tech_images' => 'array', // decode/encode JSON automatically

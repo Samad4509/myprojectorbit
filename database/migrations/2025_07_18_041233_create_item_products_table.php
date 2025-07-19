@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('banner_title');
             $table->string('banner_subtitle')->nullable();
             $table->text('banner_description')->nullable();
-            $table->longText('product_features')->change(); // or longText()// Supports Summernote HTML
+            $table->longText('product_features'); // or longText()// Supports Summernote HTML
             $table->string('banner_image')->nullable();   // Single banner image
-            $table->string('tech_title')->nullable();       // Multiple images (JSON array)
+            $table->string(column: 'tech_title')->nullable();       // Multiple images (JSON array)
             $table->json('tech_images')->nullable();       // Multiple images (JSON array)
             $table->string('meta_title')->nullable();
             $table->string('meta_keywords')->nullable();

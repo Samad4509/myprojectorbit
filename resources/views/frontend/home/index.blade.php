@@ -279,189 +279,37 @@ Home Page | Orbit
             </div>
 
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm hover-effect">
-                        <img src="https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                            class="card-img-top object-fit-cover" alt="Marketplace" style="height: 180px;">
-                        <div class="card-body text-center bg-dark">
-                            <div class="mb-3">
-                                <i class="fas fa-store fa-2x text-primary"></i>
-                            </div>
-                            <h5 class="card-title text-white">E-Ecommerce (With App) </h5>
-                            <p class="card-text">Marketplace platform that allows multiple vendors to sell their
-                                products through your website.</p>
-                            <a href="ecommerce.html"
-                                class="btn button-color rounded-pill px-4 py-2 mt-2 stretched-link d-none text-white border-0">
-                                Learn More <i class="fas fa-arrow-right ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Multi Vendor Ecommerce -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm hover-effect">
-                        <img src="https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                            class="card-img-top object-fit-cover" alt="Marketplace" style="height: 180px;">
-                        <div class="card-body text-center bg-dark">
-                            <div class="mb-3">
-                                <i class="fas fa-store fa-2x text-primary"></i>
-                            </div>
-                            <h5 class="card-title text-white">Multi Vendor Ecommerce</h5>
-                            <p class="card-text">Marketplace platform that allows multiple vendors to sell their
-                                products through your website.</p>
-                            <a href="product-detail.html"
-                                class="btn button-color rounded-pill px-4 py-2 mt-2 stretched-link d-none text-white border-0">
-                                Learn More <i class="fas fa-arrow-right ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                 @foreach ($itemProducts as $item)
+                    <div class="col-lg-4 col-md-6">
+                        <a href="{{ route('product.show', $item->product_id)}}">
+                            <div class="card h-100 border-0 shadow-sm hover-effect">
+                            <img src="{{ asset($item->product_image) }}" 
+                                class="card-img-top object-fit-cover" 
+                                alt="{{ $item->banner_title }}"
+                                style="height: 180px; object-fit: cover;">
 
-                <!-- News Portal -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm hover-effect">
-                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                            class="card-img-top object-fit-cover" alt="News Portal" style="height: 180px;">
-                        <div class="card-body text-center bg-dark">
-                            <div class="mb-3">
-                                <i class="fas fa-newspaper fa-2x text-primary"></i>
-                            </div>
-                            <h5 class="card-title text-white">News Portal</h5>
-                            <p class="card-text">Modern news website with content management, categories, tags, and
-                                multimedia support.</p>
-                            <a href="product-detail.html"
-                                class="btn button-color rounded-pill px-4 py-2 mt-2 stretched-link d-none text-white border-0">
-                                Learn More <i class="fas fa-arrow-right ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                            <div class="card-body text-center bg-dark">
+                                <div class="mb-3">
+                                    <i class="fas fa-store fa-2x text-primary"></i>
+                                </div>
+                                <h5 class="card-title text-white">{{ $item->banner_title }}</h5>
+                                <p class="card-text text-white">{{ Str::limit($item->banner_description, 100) }}</p>
 
-                <!-- Blog Site -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm hover-effect">
-                        <img src="https://images.pexels.com/photos/261579/pexels-photo-261579.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                            class="card-img-top object-fit-cover" alt="Blog" style="height: 180px;">
-                        <div class="card-body text-center bg-dark">
-                            <div class="mb-3">
-                                <i class="fas fa-blog fa-2x text-primary"></i>
+                                <a href="{{ route('product.show', $item->product_id) }}" 
+                                class="btn button-color rounded-pill px-4 py-2 mt-2 text-white border-0">
+                                    Details <i class="fas fa-arrow-right ms-2"></i>
+                                </a>
                             </div>
-                            <h5 class="card-title text-white">Blog Site</h5>
-                            <p class="card-text">Professional blogging platform with SEO optimization, social sharing,
-                                and analytics.</p>
-                            <a href="products.html"
-                                class="btn button-color rounded-pill px-4 py-2 mt-2 stretched-link d-none text-white border-0">
-                                Learn More <i class="fas fa-arrow-right ms-2"></i>
-                            </a>
                         </div>
+                        </a>
                     </div>
-                </div>
-
-                <!-- ERP System -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm hover-effect">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                            class="card-img-top object-fit-cover" alt="ERP System" style="height: 180px;">
-                        <div class="card-body text-center bg-dark">
-                            <div class="mb-3">
-                                <i class="fas fa-network-wired fa-2x text-primary"></i>
-                            </div>
-                            <h5 class="card-title text-white">ERP System</h5>
-                            <p class="card-text">Enterprise Resource Planning solution to integrate all business
-                                processes into one system.</p>
-                            <a href="product-detail.html"
-                                class="btn button-color rounded-pill px-4 py-2 mt-2 stretched-link d-none text-white border-0">
-                                Learn More <i class="fas fa-arrow-right ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Inventory Management -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm hover-effect">
-                        <img src="https://images.pexels.com/photos/4482900/pexels-photo-4482900.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                            class="card-img-top object-fit-cover" alt="Inventory Management" style="height: 180px;">
-                        <div class="card-body text-center bg-dark">
-                            <div class="mb-3">
-                                <i class="fas fa-boxes-stacked fa-2x text-primary"></i>
-                            </div>
-                            <h5 class="card-title text-white">Inventory Management</h5>
-                            <p class="card-text">Track stock levels, orders, sales and deliveries across multiple
-                                locations in real-time.</p>
-                            <a href="product-detail.html"
-                                class="btn button-color rounded-pill px-4 py-2 mt-2 stretched-link d-none text-white border-0">
-                                Learn More <i class="fas fa-arrow-right ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- HRM System -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm hover-effect">
-                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                            class="card-img-top object-fit-cover" alt="HRM System" style="height: 180px;">
-                        <div class="card-body text-center bg-dark">
-                            <div class="mb-3">
-                                <i class="fas fa-users fa-2x text-primary"></i>
-                            </div>
-                            <h5 class="card-title text-white">HRM System</h5>
-                            <p class="card-text">Human Resource Management software for employee records, payroll,
-                                attendance and more.</p>
-                            <a href="product-detail.html"
-                                class="btn button-color rounded-pill px-4 py-2 mt-2 stretched-link d-none text-white border-0">
-                                Learn More <i class="fas fa-arrow-right ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Hotel Management -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm hover-effect">
-                        <img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                            class="card-img-top object-fit-cover" alt="Hotel Management" style="height: 180px;">
-                        <div class="card-body text-cente bg-dark">
-                            <div class="mb-3">
-                                <i class="fas fa-hotel fa-2x text-primary"></i>
-                            </div>
-                            <h5 class="card-title text-white">Hotel Management</h5>
-                            <p class="card-text">Complete solution for hotel operations including reservations,
-                                housekeeping and billing.</p>
-                            <a href="profile-details.html"
-                                class="btn button-color rounded-pill px-4 py-2 mt-2 stretched-link d-none text-white border-0">
-                                Learn More <i class="fas fa-arrow-right ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Hosting Site -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border-0 shadow-sm hover-effect">
-                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                            class="card-img-top object-fit-cover" alt="Hosting Site" style="height: 180px;">
-                        <div class="card-body text-center bg-dark">
-                            <div class="mb-3">
-                                <i class="fas fa-server fa-2x text-primary"></i>
-                            </div>
-                            <h5 class="card-title text-white">Hosting Site</h5>
-                            <p class="card-text">Web hosting platform with domain registration, email hosting and
-                                website builder.</p>
-                            <a href="product-detail.html"
-                                class="btn button-color rounded-pill px-4 py-2 mt-2 stretched-link d-none text-white border-0">
-                                Learn More <i class="fas fa-arrow-right ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
 
             <!-- All Products Button -->
             <div class="row mt-5">
                 <div class="col-12 text-center">
-                    <a class="rainbow-gradient-btn" href="{{route('all.products')}}"><span>View All Services</span></a>
+                    <a class="rainbow-gradient-btn" href="{{route('all.products')}}"><span>View All Products</span></a>
                 </div>
             </div>
         </div>

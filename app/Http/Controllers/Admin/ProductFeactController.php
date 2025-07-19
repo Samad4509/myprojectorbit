@@ -27,7 +27,7 @@ class ProductFeactController extends Controller
     public function create()
     {
         // return "ok";
-        return view("admin.itemproducts.featersedit");
+        return view("admin.itemproducts.feature");
     }
 
     /**
@@ -36,7 +36,7 @@ class ProductFeactController extends Controller
    public function store(Request $request)
     {
         $request->validate([
-            'product_id' => 'required|exists:products,id|unique:item_features,product_id', // << Updated to correct table
+            // << Updated to correct table
             'section_title' => 'required|string|max:255',
             'feature_title' => 'required|string|max:255',
             'feature_sub_title' => 'required|string|max:255',

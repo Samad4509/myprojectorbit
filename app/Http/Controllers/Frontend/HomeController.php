@@ -2,19 +2,25 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Http\Controllers\Controller;
+use App\Models\Product;
+
+use App\Models\ItemProduct;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return  view('frontend.home.index');
+         $itemProducts = ItemProduct::with('product')->get();
+        return  view('frontend.home.index',compact('itemProducts'));
     }
     public function allproduct()
     {
+        $itemProducts = ItemProduct::with('product')->get();
+
         // return "ok";
-        return  view('frontend.product.index');
+        return  view('frontend.product.index',compact(var_name: 'itemProducts'));
     }
     public function service()
     {

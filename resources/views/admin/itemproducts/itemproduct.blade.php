@@ -61,6 +61,14 @@
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
+                                <div class="form-group col-sm-6">
+                                    <label for="BannerImage">Product Image</label>
+                                    <input type="file" class="form-control" name="product_image">
+                                    <div id="imagePreview" class="mt-2"></div>
+                                    @error('banner_image')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
                             </div>
 
                             <!-- Banner Titles -->
@@ -97,8 +105,16 @@
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
+                            <div class="form-group">
+                                <label>Professional Development</label>
+                               <input type="text" class="form-control" name="tech_title">
+                                @error('product_features')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
 
                             <!-- Multiple Images -->
+                            
                             <div class="form-group">
                                 <label>Using Technology for Professional Development</label>
                                 <div class="multi-upload-area" id="multiUploadArea">

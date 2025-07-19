@@ -13,42 +13,63 @@ class AllProductsController extends Controller
         $products = Product::all();
         return view("admin.itemproducts.itemproduct",compact("products"));
     }
-    public function store(Request $request){
+ public function store(Request $request)
+    {
         $data = $request->validate([
             'product_id' => 'required|exists:products,id|unique:item_products,product_id',
             'banner_title' => 'required|string|max:255',
             'banner_subtitle' => 'nullable|string|max:255',
             'banner_description' => 'nullable|string',
             'product_features' => 'nullable|string',
-            'banner_image' => 'nullable|image|max:5120',
-            'tech_images.*' => 'nullable|image|max:5120',
+            'tech_title' => 'nullable|string|max:255',
+
+            // File validations
+            'banner_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:5120',
+            'product_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:5120',
+            'tech_images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:5120',
+
+            // SEO fields
             'meta_title' => 'nullable|string|max:255',
             'meta_keywords' => 'nullable|string|max:255',
             'meta_description' => 'nullable|string|max:500',
         ]);
 
-        // Handle banner_image
+        // Handle banner_image upload
         if ($request->hasFile('banner_image')) {
-            $file = $request->file('banner_image');
-            $name = time().'_'.$file->getClientOriginalName();
-            $file->move(public_path('uploads/banners'), $name);
-            $data['banner_image'] = 'uploads/banners/' . $name;
+            $bannerFile = $request->file('banner_image');
+            $bannerName = 'banner_' . time() . '_' . $bannerFile->getClientOriginalName();
+            $bannerFile->move(public_path('uploads/banners'), $bannerName);
+            $data['banner_image'] = 'uploads/banners/' . $bannerName;
         }
 
-        // Handle tech_images
+        // Handle product_image upload
+        if ($request->hasFile('product_image')) {
+            $productFile = $request->file('product_image');
+            $productName = 'product_' . time() . '_' . $productFile->getClientOriginalName();
+            $productFile->move(public_path('uploads/products'), $productName);
+            $data['product_image'] = 'uploads/products/' . $productName;
+        }
+
+        // Handle tech_images upload (multiple files)
         if ($request->hasFile('tech_images')) {
-            $paths = [];
+            $techPaths = [];
             foreach ($request->file('tech_images') as $img) {
-                $filename = time().'_'.uniqid().'.'.$img->getClientOriginalExtension();
-                $img->move(public_path('uploads/tech_images'), $filename);
-                $paths[] = 'uploads/tech_images/' . $filename;
+                $techName = 'tech_' . time() . '_' . uniqid() . '.' . $img->getClientOriginalExtension();
+                $img->move(public_path('uploads/tech_images'), $techName);
+                $techPaths[] = 'uploads/tech_images/' . $techName;
             }
-            $data['tech_images'] = json_encode($paths);
+            $data['tech_images'] = json_encode($techPaths);
         }
 
+        // Create the item product
         ItemProduct::create($data);
-        return redirect()->route('all.create')->with('success', 'Banner created successfully!');
+
+        return redirect()->route('all.create')->with([
+            'success' => 'Product banner created successfully!',
+            'alert-type' => 'success'
+        ]);
     }
+
 
    public function manage()
     {
